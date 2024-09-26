@@ -5,10 +5,10 @@ import SleepSvg from '../assets/sleep-svgrepo-com.svg'
 import HealthSvg from '../assets/health-increase-svgrepo-com.svg'
 const Benefits = () => {
     return (
-        <div className="max-w-6xl mx-auto h-screen flex items-center">
+        <div className="max-w-6xl mx-auto flex items-center">
             <div className="flex flex-col lg:flex-row items-center">
-                <div className="flex flex-col justify-center items-start space-y-3 lg:px-12">
-                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center lg:text-left">
+                <div className="flex flex-col justify-center items-start space-y-3 px-3 lg:px-12">
+                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mx-auto lg:mx-0 lg:text-left">
                         Why Meditate?
                     </h1>
                     <p className="text-base md:text-lg font-lora text-center lg:text-left">
