@@ -1,4 +1,3 @@
-import { Button } from "./ui/button";
 import AboutSvg from '../assets/undraw_about_me_re_82bv.svg'
 const About = () => {
     return (
