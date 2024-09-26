@@ -1,5 +1,5 @@
 import { Button } from './ui/button';
-import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, navigationMenuTriggerStyle } from './ui/navigation-menu';
+import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from './ui/navigation-menu';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 
 const Navbar = () => {
@@ -20,10 +20,10 @@ const Navbar = () => {
                         <SheetContent side='left'>
                             <div className="grid gap-2 py-6">
                                 <a href='/'>Home</a>
-                                <a href='/blogs'>Blogs</a>
-                                <a href='/'>Prodcasts</a>
-                                <a href='/'>Contact</a>
-                                <a href='/'>About</a>
+                                <a href='/blogs'>About</a>
+                                <a href='/'>Services</a>
+                                <a href='/'>Pricing</a>
+                                <a href='/'>Testimonial</a>
                             </div>
                         </SheetContent>
                     </Sheet>
