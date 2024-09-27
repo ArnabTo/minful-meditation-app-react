@@ -1,9 +1,15 @@
 import BenefitSvg from '../assets/undraw_personal_file_re_5joy.svg'
 import ReduceSvg from '../assets/reduce-svgrepo-com.svg'
+import ReduceSvgDark from '../assets//reduce-svgrepo-com-dark.svg'
 import FocusSvg from '../assets/focus-point-847-svgrepo-com.svg'
+import FocusSvgDark from '../assets/focus-point-847-svgrepo-com-dark.svg'
 import SleepSvg from '../assets/sleep-svgrepo-com.svg'
+import SleepSvgDark from '../assets/sleep-svgrepo-com-dark.svg'
 import HealthSvg from '../assets/health-increase-svgrepo-com.svg'
+import HealthSvgDark from '../assets/health-increase-svgrepo-com-dark.svg'
+import { useTheme } from './Provider/ThemeProvider'
 const Benefits = () => {
+    const { theme } = useTheme();
     return (
         <div className="max-w-6xl mx-auto flex items-center">
             <div className="flex flex-col lg:flex-row items-center">
@@ -16,33 +22,55 @@ const Benefits = () => {
                     </p>
                     <ul>
                         <li className='flex items-center gap-4 p-4 font-lora rounded-sm mb-2 hover:scale-105 transition-all'>
-                            <img className='max-w-[3rem]' src={ReduceSvg} alt="reduce" />
+                            {
+                                theme === 'light' ?
+                                    <img className='max-w-[3rem]' src={ReduceSvg} alt="reduce" />
+                                    :
+                                    <img className='max-w-[3rem]' src={ReduceSvgDark} alt="reduce" />
+                            }
                             <span>
                                 <p className='font-bold text-lg'>Reduces Stress and Anxiety</p>
                                 <p>Meditation helps calm the mind and body, leading to lower stress levels and reduced anxiety, promoting overall mental peace.</p>
                             </span>
                         </li>
                         <li className='flex items-center gap-4 p-4 font-lora rounded-sm mb-2 hover:scale-105 transition-all'>
-                            <img className='max-w-[3rem]' src={FocusSvg} alt="reduce" />
+                            {
+                                theme === 'light' ?
+                                    <img className='max-w-[3rem]' src={FocusSvg} alt="reduce" />
+                                    :
+                                    <img className='max-w-[3rem]' src={FocusSvgDark} alt="reduce" />
+                            }
                             <span>
                                 <p className='font-bold text-lg'>Improves Focus and Concentration</p>
                                 <p>By training the mind to stay present, meditation boosts your ability to concentrate and enhances your productivity.</p>
                             </span>
                         </li>
                         <li className='flex items-center gap-4 p-4 font-lora rounded-sm mb-2 hover:scale-105 transition-all'>
-                            <img className='max-w-[3rem]' src={HealthSvg} alt="reduce" />
+                            {
+                                theme === 'light' ?
+                                    <img className='max-w-[3rem]' src={HealthSvg} alt="reduce" />
+                                    :
+                                    <img className='max-w-[3rem]' src={HealthSvgDark} alt="reduce" />
+                            }
                             <span>
                                 <p className='font-bold text-lg'>Enhances Emotional Health</p>
                                 <p>Regular meditation improves emotional resilience, leading to a more balanced, positive outlook on life.</p>
                             </span>
                         </li>
                         <li className='flex items-center gap-4 p-4 font-lora rounded-sm mb-2 hover:scale-105 transition-all'>
-                            <img className='max-w-[3rem]' src={SleepSvg} alt="reduce" />
+                            {
+                                theme === 'light' ?
+                                    <img className='max-w-[3rem]' src={SleepSvg} alt="reduce" />
+                                    :
+                                    <img className='max-w-[3rem]' src={SleepSvgDark} alt="reduce" />
+                            }
+
                             <span>
                                 <p className='font-bold text-lg'>Promotes Better Sleep</p>
                                 <p>Practicing mindfulness and relaxation techniques through meditation leads to deeper, more restorative sleep.</p>
                             </span>
                         </li>
+
                     </ul>
                 </div>
                 <div className="flex justify-center mb-6 lg:mb-0">

@@ -15,21 +15,21 @@ const Contact = () => {
                         <input
                             type="text"
                             placeholder="Your Name"
-                            className="p-3 border border-gray-500 bg-white dark:bg-gray-800 dark:text-white rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
+                            className="p-3 border border-gray-500 bg-white  rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
                         />
                         <input
                             type="email"
                             placeholder="Your Email"
-                            className="p-3 border border-gray-500 bg-white dark:bg-gray-800 dark:text-white rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
+                            className="p-3 border border-gray-500 bg-white  rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
                         />
                         <textarea
                             placeholder="Your Message"
                             rows="4"
-                            className="p-3 border border-gray-500 bg-white dark:bg-gray-800 dark:text-white rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
+                            className="p-3 border border-gray-500 bg-white  rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
                         />
                         <button
                             type="submit"
-                            className="bg-black dark:bg-white text-white dark:text-black font-bold py-3 rounded-md hover:bg-gray-800 dark:hover:bg-gray-300 transition">
+                            className="bg-black dark:bg-white text-white dark:text-black font-bold py-3 rounded-md hover:red dark:hover:bg-gray-300 transition">
                             Send Message
                         </button>
                     </form>
