@@ -40,7 +40,7 @@ const Navbar = () => {
                                 <NavigationMenuItem className='bg-transparent'>
                                     <a href="/" >
                                         <NavigationMenuLink className='mx-2'>
-                                            <span className="text-black font-medium text-md hover:bg-black hover:text-white px-2 py-1 rounded-lg transition-all">Home</span>
+                                            <span className="text-black font-medium font-lora text-md hover:bg-black hover:text-white px-2 py-1 rounded-lg transition-all">Home</span>
                                         </NavigationMenuLink>
                                     </a>
                                 </NavigationMenuItem>
@@ -48,7 +48,7 @@ const Navbar = () => {
                                 <NavigationMenuItem>
                                     <a href="/blogs">
                                         <NavigationMenuLink className='mx-2'>
-                                            <span className="text-black font-medium text-md hover:bg-black hover:text-white px-2 py-1 rounded-lg transition-all">About</span>
+                                            <span className="text-black font-medium font-lora text-md hover:bg-black hover:text-white px-2 py-1 rounded-lg transition-all">About</span>
                                         </NavigationMenuLink>
                                     </a>
                                 </NavigationMenuItem>
@@ -56,7 +56,7 @@ const Navbar = () => {
                                 <NavigationMenuItem>
                                     <a href="/">
                                         <NavigationMenuLink className='mx-2'>
-                                            <span className="text-black font-medium text-md hover:bg-black hover:text-white px-2 py-1 rounded-lg transition-all">services</span>
+                                            <span className="text-black font-medium font-lora text-md hover:bg-black hover:text-white px-2 py-1 rounded-lg transition-all">services</span>
                                         </NavigationMenuLink>
                                     </a>
                                 </NavigationMenuItem>
@@ -72,14 +72,14 @@ const Navbar = () => {
                                 <NavigationMenuItem>
                                     <a href="/">
                                         <NavigationMenuLink className='mx-2'>
-                                            <span className="text-black font-medium text-md hover:bg-black hover:text-white px-2 py-1 rounded-lg transition-all">Pricing</span>
+                                            <span className="text-black font-medium font-lora text-md hover:bg-black hover:text-white px-2 py-1 rounded-lg transition-all">Pricing</span>
                                         </NavigationMenuLink>
                                     </a>
                                 </NavigationMenuItem>
                                 <NavigationMenuItem>
                                     <a href="/">
                                         <NavigationMenuLink className='mx-2'>
-                                            <span className="text-black font-medium text-md hover:bg-black hover:text-white px-2 py-1 rounded-lg transition-all">Testimonial</span>
+                                            <span className="text-black font-medium font-lora text-md hover:bg-black hover:text-white px-2 py-1 rounded-lg transition-all">Testimonial</span>
                                         </NavigationMenuLink>
                                     </a>
                                 </NavigationMenuItem>
