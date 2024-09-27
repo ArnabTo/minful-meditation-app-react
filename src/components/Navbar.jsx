@@ -7,7 +7,7 @@ import '../App.css'
 const Navbar = () => {
 
     const { theme } = useTheme();
- const [isScrolled, setIsScrolled] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
 
 
     useEffect(() => {
@@ -31,7 +31,7 @@ const Navbar = () => {
         <div className={`${isScrolled ? 'fixed w-full bg-glassmorphism z-50 top-0' : 'relative'} transition-all duration-300`}>
             <div className="max-w-7xl mx-auto">
                 {/* Mobile view */}
-                <div className="flex lg:hidden">
+                <div className="flex items-center lg:hidden">
                     <Sheet>
                         <SheetTrigger className=' mx-4 py-5'>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={28} height={28} color={"#303036"} fill={"none"}>
@@ -51,9 +51,12 @@ const Navbar = () => {
                             </div>
                         </SheetContent>
                     </Sheet>
-                    <div className="flex m-auto">
-                        <img src='https://i.ibb.co/6rDQ2vR/Black-Beige-Minimalist-Simple-Modern-Typography-Vanilla-Cosmetics-Logo-3-removebg-preview.png' width={200} height={100} alt="logo" />
+                    <div className="m-auto">
+                        <span className={`${theme === 'light' ? 'text-black' : 'text-[#d5d5d5]'} font-extrabold text-md text-xl`}>Mindful</span>
                     </div>
+                <div className='pr-4'>
+                <ThemeSwitch />
+                </div>
                 </div>
 
                 {/* Desktop view */}
@@ -108,7 +111,7 @@ const Navbar = () => {
                                     </a>
                                 </NavigationMenuItem>
                                 <NavigationMenuItem>
-                               <ThemeSwitch/>
+                                    <ThemeSwitch />
                                 </NavigationMenuItem>
                             </NavigationMenuList>
                         </NavigationMenu>
