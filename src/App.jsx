@@ -8,20 +8,23 @@ import Pricing from './components/Pricing'
 import Services from './components/Services'
 import Testimonies from './components/Testimonies'
 import StartJourney from './components/StartJourney'
+import Contact from './components/Contact'
+
 
 function App() {
 
   return (
     <div className='max-w-7xl mx-auto'>
-      <Navbar/>
-      <Hero/>
-      <About/>
-      <Services/>
-      <Benefits/>
-      <Testimonies/>
-      <Pricing/>
-      <StartJourney/>
-       <AnimatedCursor
+      <Navbar />
+      <Hero />
+      <About />
+      <Services />
+      <Benefits />
+      <Testimonies />
+      <Pricing />
+      <StartJourney />
+      <Contact />
+      <AnimatedCursor
         innerSize={8}
         outerSize={10}
         color='0, 0, 0'
@@ -41,7 +44,7 @@ function App() {
           'button',
           '.link'
         ]}
-        />
+      />
     </div>
   )
 }
