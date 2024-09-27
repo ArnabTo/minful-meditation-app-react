@@ -111,8 +111,8 @@ const Testimonies = () => {
                                 </Card>
                             </CarouselItem>
                         </CarouselContent>
-                        <CarouselPrevious className='hidden lg:block' />
-                        <CarouselNext  className='hidden lg:block' />
+                        <CarouselPrevious className='hidden lg:flex' />
+                        <CarouselNext  className='hidden lg:flex' />
                     </Carousel>
                 </div>
             </div>
