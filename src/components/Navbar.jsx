@@ -3,6 +3,7 @@ import { useTheme } from './Provider/ThemeProvider';
 import { ThemeSwitch } from './ThemeSwitch';
 import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from './ui/navigation-menu';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
+import Logo from '../assets/logo.png'
 import '../App.css'
 const Navbar = () => {
 
@@ -52,15 +53,16 @@ const Navbar = () => {
                         </SheetContent>
                     </Sheet>
                     <div className="m-auto">
-                        <span className={`${theme === 'light' ? 'text-black' : 'text-[#d5d5d5]'} font-extrabold text-md text-xl`}>Mindful</span>
+                    <img src={Logo} alt="logo" className='max-w-[10rem]' />
+                        {/* <span className={`${theme === 'light' ? 'text-black' : 'text-[#d5d5d5]'} font-extrabold text-md text-xl`}>Mindful</span> */}
                     </div>
-                <div className='pr-4'>
-                <ThemeSwitch />
-                </div>
+                    <div className='pr-4'>
+                        <ThemeSwitch />
+                    </div>
                 </div>
 
                 {/* Desktop view */}
-                <div className="hidden lg:block py-4 ">
+                <div className="hidden lg:block">
                     <div className="flex justify-center items-center">
                         <NavigationMenu>
                             <NavigationMenuList>
@@ -91,7 +93,8 @@ const Navbar = () => {
                                 <NavigationMenuItem>
                                     <a href="/">
                                         <NavigationMenuLink className='mx-2'>
-                                            <span className={`${theme === 'light' ? 'text-black' : 'text-[#d5d5d5]'} font-extrabold text-md text-xl`}>Mindful</span>
+                                            <img src={Logo} alt="logo" className='max-w-[10rem]' />
+                                            {/* <span className={`${theme === 'light' ? 'text-black' : 'text-[#d5d5d5]'} font-extrabold text-md text-xl`}>Mindful</span> */}
                                         </NavigationMenuLink>
                                     </a>
                                 </NavigationMenuItem>

@@ -27,10 +27,10 @@ const HomePage = () => {
                 <AnimatedCursor
                     innerSize={8}
                     outerSize={10}
-                    color={` ${theme === 'dark' ? '255, 255, 255' : '0, 0, 0'}`}
+                    color={`${theme === 'dark' ? '255, 255, 255' : '0, 0, 0'}`}
                     outerAlpha={0.2}
                     innerScale={0.7}
-                    outerScale={5}
+                    outerScale={7}
                     clickables={[
                         'a',
                         'input[type="text"]',
@@ -42,7 +42,11 @@ const HomePage = () => {
                         'select',
                         'textarea',
                         'button',
-                        '.link'
+                        '.link',
+                        'h1',
+                        'h2',
+                        'p',
+                        'li'
                     ]}
                 />
             </div>
