@@ -68,36 +68,36 @@ const Navbar = () => {
 
                 {/* Desktop view */}
                 <div className="hidden lg:block">
-                    <div className="flex justify-center items-center">
+                    <div className={`flex justify-center items-center ${isScrolled ? 'py-3' : 'py-5'}`}>
                         <NavigationMenu>
                             <NavigationMenuList>
                                 <NavigationMenuItem className='bg-transparent'>
                                     <Link to='home' smooth={true} duration={500} >
-                                        <NavigationMenuLink className='mx-2'>
-                                            <span className={`${theme === 'light' ? 'text-black' : 'text-[#d5d5d5]'} font-medium font-lora text-md hover:bg-black hover:text-white px-2 py-1 rounded-lg transition-all`}>Home</span>
+                                        <NavigationMenuLink className='mr-2'>
+                                            <span className={`${theme === 'light' ? 'text-black hover:bg-black hover:text-[#d5d5d5]' : 'hover:text-black hover:bg-white'} font-medium font-lora text-md px-2 py-2 rounded-full transition-all`}>Home</span>
                                         </NavigationMenuLink>
                                     </Link>
                                 </NavigationMenuItem>
 
                                 <NavigationMenuItem>
                                     <Link to='about' smooth={true} duration={500}>
-                                        <NavigationMenuLink className='mx-2'>
-                                            <span className={`${theme === 'light' ? 'text-black' : 'text-[#d5d5d5]'} font-medium font-lora text-md hover:bg-black hover:text-white px-2 py-1 rounded-lg transition-all`}>About</span>
+                                        <NavigationMenuLink className='mr-2'>
+                                            <span className={`${theme === 'light' ? 'text-black hover:bg-black hover:text-[#d5d5d5]' : 'hover:text-black hover:bg-white'} font-medium font-lora text-md px-2 py-2 rounded-full transition-all`}>About</span>
                                         </NavigationMenuLink>
                                     </Link>
                                 </NavigationMenuItem>
 
                                 <NavigationMenuItem>
                                     <Link to='services' smooth={true} duration={500}>
-                                        <NavigationMenuLink className='mx-2'>
-                                            <span className={`${theme === 'light' ? 'text-black' : 'text-[#d5d5d5]'} font-medium font-lora text-md hover:bg-black hover:text-white px-2 py-1 rounded-lg transition-all`}>services</span>
+                                        <NavigationMenuLink className='mr-2'>
+                                            <span className={`${theme === 'light' ? 'text-black hover:bg-black hover:text-[#d5d5d5]' : 'hover:text-black hover:bg-white'} font-medium font-lora text-md px-2 py-2 rounded-full transition-all`}>services</span>
                                         </NavigationMenuLink>
                                     </Link>
                                 </NavigationMenuItem>
 
                                 <NavigationMenuItem>
                                     <Link>
-                                        <NavigationMenuLink className='mx-2'>
+                                        <NavigationMenuLink className='flex justify-center'>
                                             <img src={Logo} alt="logo" className='max-w-[10rem]' />
                                         </NavigationMenuLink>
                                     </Link>
@@ -105,15 +105,15 @@ const Navbar = () => {
 
                                 <NavigationMenuItem>
                                     <Link to='pricing' smooth={true} duration={500}>
-                                        <NavigationMenuLink className='mx-2'>
-                                            <span className={`${theme === 'light' ? 'text-black' : 'text-[#d5d5d5]'} font-medium font-lora text-md hover:bg-black hover:text-white px-2 py-1 rounded-lg transition-all`}>Pricing</span>
+                                        <NavigationMenuLink className='mr-2'>
+                                            <span className={`${theme === 'light' ? 'text-black hover:bg-black hover:text-[#d5d5d5]' : 'hover:text-black hover:bg-white'} font-medium font-lora text-md px-2 py-2 rounded-full transition-all`}>Pricing</span>
                                         </NavigationMenuLink>
                                     </Link>
                                 </NavigationMenuItem>
                                 <NavigationMenuItem>
                                     <Link to='testimonies' smooth={true} duration={500}>
-                                        <NavigationMenuLink className='mx-2'>
-                                            <span className={`${theme === 'light' ? 'text-black' : 'text-[#d5d5d5]'} font-medium font-lora text-md hover:bg-black hover:text-white px-2 py-1 rounded-lg transition-all`}>Testimonial</span>
+                                        <NavigationMenuLink className='mr-2'>
+                                            <span className={`${theme === 'light' ? 'text-black hover:bg-black hover:text-[#d5d5d5]' : 'hover:text-black hover:bg-white'} font-medium font-lora text-md px-2 py-2 rounded-full transition-all`}>Testimonial</span>
                                         </NavigationMenuLink>
                                     </Link>
                                 </NavigationMenuItem>
