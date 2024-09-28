@@ -5,6 +5,7 @@ import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuL
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 import Logo from '../assets/logo.png'
 import '../App.css'
+import { Link } from 'react-scroll';
 const Navbar = () => {
 
     const { theme } = useTheme();
@@ -44,17 +45,16 @@ const Navbar = () => {
 
                         <SheetContent side='left'>
                             <div className="grid gap-2 py-6">
-                                <a href='/'>Home</a>
-                                <a href='/blogs'>About</a>
-                                <a href='/'>Services</a>
-                                <a href='/'>Pricing</a>
-                                <a href='/'>Testimonial</a>
+                                <Link to='home' smooth={true} duration={500}>Home</Link>
+                                <Link to='about' smooth={true} duration={500}>About</Link>
+                                <Link to='services' smooth={true} duration={500}>Services</Link>
+                                <Link to='pricing' smooth={true} duration={500}>Pricing</Link>
+                                <Link to='testimonies' smooth={true} duration={500}>Testimonial</Link>
                             </div>
                         </SheetContent>
                     </Sheet>
                     <div className="m-auto">
-                    <img src={Logo} alt="logo" className='max-w-[10rem]' />
-                        {/* <span className={`${theme === 'light' ? 'text-black' : 'text-[#d5d5d5]'} font-extrabold text-md text-xl`}>Mindful</span> */}
+                        <img src={Logo} alt="logo" className='max-w-[10rem]' />
                     </div>
                     <div className='pr-4'>
                         <ThemeSwitch />
@@ -67,51 +67,50 @@ const Navbar = () => {
                         <NavigationMenu>
                             <NavigationMenuList>
                                 <NavigationMenuItem className='bg-transparent'>
-                                    <a href="/" >
+                                    <Link to='home' smooth={true} duration={500} >
                                         <NavigationMenuLink className='mx-2'>
                                             <span className={`${theme === 'light' ? 'text-black' : 'text-[#d5d5d5]'} font-medium font-lora text-md hover:bg-black hover:text-white px-2 py-1 rounded-lg transition-all`}>Home</span>
                                         </NavigationMenuLink>
-                                    </a>
+                                    </Link>
                                 </NavigationMenuItem>
 
                                 <NavigationMenuItem>
-                                    <a href="/blogs">
+                                    <Link to='about' smooth={true} duration={500}>
                                         <NavigationMenuLink className='mx-2'>
                                             <span className={`${theme === 'light' ? 'text-black' : 'text-[#d5d5d5]'} font-medium font-lora text-md hover:bg-black hover:text-white px-2 py-1 rounded-lg transition-all`}>About</span>
                                         </NavigationMenuLink>
-                                    </a>
+                                    </Link>
                                 </NavigationMenuItem>
 
                                 <NavigationMenuItem>
-                                    <a href="/">
+                                    <Link to='services' smooth={true} duration={500}>
                                         <NavigationMenuLink className='mx-2'>
                                             <span className={`${theme === 'light' ? 'text-black' : 'text-[#d5d5d5]'} font-medium font-lora text-md hover:bg-black hover:text-white px-2 py-1 rounded-lg transition-all`}>services</span>
                                         </NavigationMenuLink>
-                                    </a>
+                                    </Link>
                                 </NavigationMenuItem>
 
                                 <NavigationMenuItem>
-                                    <a href="/">
+                                    <Link>
                                         <NavigationMenuLink className='mx-2'>
                                             <img src={Logo} alt="logo" className='max-w-[10rem]' />
-                                            {/* <span className={`${theme === 'light' ? 'text-black' : 'text-[#d5d5d5]'} font-extrabold text-md text-xl`}>Mindful</span> */}
                                         </NavigationMenuLink>
-                                    </a>
+                                    </Link>
                                 </NavigationMenuItem>
 
                                 <NavigationMenuItem>
-                                    <a href="/">
+                                    <Link to='pricing' smooth={true} duration={500}>
                                         <NavigationMenuLink className='mx-2'>
                                             <span className={`${theme === 'light' ? 'text-black' : 'text-[#d5d5d5]'} font-medium font-lora text-md hover:bg-black hover:text-white px-2 py-1 rounded-lg transition-all`}>Pricing</span>
                                         </NavigationMenuLink>
-                                    </a>
+                                    </Link>
                                 </NavigationMenuItem>
                                 <NavigationMenuItem>
-                                    <a href="/">
+                                    <Link to='testimonies'smooth={true} duration={500}>
                                         <NavigationMenuLink className='mx-2'>
                                             <span className={`${theme === 'light' ? 'text-black' : 'text-[#d5d5d5]'} font-medium font-lora text-md hover:bg-black hover:text-white px-2 py-1 rounded-lg transition-all`}>Testimonial</span>
                                         </NavigationMenuLink>
-                                    </a>
+                                    </Link>
                                 </NavigationMenuItem>
                                 <NavigationMenuItem>
                                     <ThemeSwitch />

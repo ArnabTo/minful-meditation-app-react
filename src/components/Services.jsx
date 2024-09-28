@@ -3,7 +3,7 @@ import ServiceSvg from '../assets/undraw_chore_list_re_2lq8.svg';
 
 const Services = () => {
     return (
-        <div className="max-w-7xl mx-auto mt-16 mb-24 px-4 md:px-8 lg:px-12 lg:mt-40 lg:mb-44">
+        <section className="max-w-7xl mx-auto mt-16 mb-24 px-4 md:px-8 lg:px-12 lg:mt-40 lg:mb-44" id='services'>
             <div className="flex flex-col lg:flex-row-reverse items-center space-y-8 lg:space-y-0">
                 {/* Left Section: Text */}
                 <div className="flex flex-col justify-center items-start space-y-4 lg:space-y-5 lg:px-12 w-full lg:w-1/2">
@@ -41,7 +41,7 @@ const Services = () => {
                     <img className="w-60 md:w-80 lg:w-[30rem] lg:max-w-2xl animate-float" src={ServiceSvg} alt="Meditation services" />
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

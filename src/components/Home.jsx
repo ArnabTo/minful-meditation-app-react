@@ -13,43 +13,41 @@ import { useTheme } from "./Provider/ThemeProvider";
 const HomePage = () => {
     const { theme } = useTheme();
     return (
-        <div>
-            <div>
-                <Navbar/>
-                <Hero/>
-                <About/>
-                <Services/>
-                <Benefits/>
-                <Testimonies/>
-                <Pricing/>
-                <StartJourney/>
-                <Contact/>
-                <AnimatedCursor
-                    innerSize={8}
-                    outerSize={10}
-                    color={`${theme === 'dark' ? '255, 255, 255' : '0, 0, 0'}`}
-                    outerAlpha={0.2}
-                    innerScale={0.7}
-                    outerScale={7}
-                    clickables={[
-                        'a',
-                        'input[type="text"]',
-                        'input[type="email"]',
-                        'input[type="number"]',
-                        'input[type="submit"]',
-                        'input[type="image"]',
-                        'label[for]',
-                        'select',
-                        'textarea',
-                        'button',
-                        '.link',
-                        'h1',
-                        'h2',
-                        'p',
-                        'li'
-                    ]}
-                />
-            </div>
+        <div id='home'>
+            <Navbar />
+            <Hero />
+            <About />
+            <Services />
+            <Benefits />
+            <Testimonies />
+            <Pricing />
+            <StartJourney />
+            <Contact />
+            <AnimatedCursor
+                innerSize={8}
+                outerSize={10}
+                color={`${theme === 'dark' ? '255, 255, 255' : '0, 0, 0'}`}
+                outerAlpha={0.2}
+                innerScale={0.7}
+                outerScale={7}
+                clickables={[
+                    'a',
+                    'input[type="text"]',
+                    'input[type="email"]',
+                    'input[type="number"]',
+                    'input[type="submit"]',
+                    'input[type="image"]',
+                    'label[for]',
+                    'select',
+                    'textarea',
+                    'button',
+                    '.link',
+                    'h1',
+                    'h2',
+                    'p',
+                    'li'
+                ]}
+            />
         </div>
     );
 };
