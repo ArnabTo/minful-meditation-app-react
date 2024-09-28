@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { Card, CardContent, CardFooter, CardHeader } from "./ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./ui/carousel";
 import ApostopheSvg from '../assets/quote-mark-svgrepo-com.svg'
@@ -10,7 +11,12 @@ const Testimonies = () => {
     const { theme } = useTheme();
     return (
         <div className="max-w-7xl mx-auto mt-16 mb-24 px-4 md:px-8 lg:px-12 lg:mt-40 lg:mb-44" id="testimonies">
-            <div>
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+                viewport={{ once: true, amount: 0.5 }}
+            >
                 <div className="flex flex-col justify-center items-center space-y-3 px-3 lg:px-12">
                     <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mx-auto lg:mx-0 lg:text-left">
                         What Our Clients Say
@@ -191,7 +197,7 @@ const Testimonies = () => {
                         <CarouselNext className='hidden lg:flex' />
                     </Carousel>
                 </div>
-            </div>
+            </motion.div>
         </div>
     );
 };

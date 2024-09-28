@@ -9,6 +9,7 @@ import Services from "./Services";
 import StartJourney from "./StartJourney";
 import Testimonies from "./Testimonies";
 import { useTheme } from "./Provider/ThemeProvider";
+import Footer from "./Footer";
 
 const HomePage = () => {
     const { theme } = useTheme();
@@ -23,6 +24,7 @@ const HomePage = () => {
             <Pricing />
             <StartJourney />
             <Contact />
+            <Footer/>
             <AnimatedCursor
                 innerSize={8}
                 outerSize={10}

@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import BenefitSvg from '../assets/undraw_personal_file_re_5joy.svg'
 import ReduceSvg from '../assets/reduce-svgrepo-com.svg'
 import ReduceSvgDark from '../assets//reduce-svgrepo-com-dark.svg'
@@ -11,7 +12,12 @@ import { useTheme } from './Provider/ThemeProvider'
 const Benefits = () => {
     const { theme } = useTheme();
     return (
-        <div className="max-w-6xl mx-auto flex items-center">
+        <motion.div 
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true, amount: 0.5 }}
+        className="max-w-6xl mx-auto flex items-center">
             <div className="flex flex-col lg:flex-row items-center">
                 <div className="flex flex-col justify-center items-start space-y-3 px-3 lg:px-12">
                     <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mx-auto lg:mx-0 lg:text-left">
@@ -77,7 +83,7 @@ const Benefits = () => {
                     <img className="w-72 md:w-96 lg:w-[30rem] lg:max-w-2xl animate-float" src={BenefitSvg} alt="hero" />
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

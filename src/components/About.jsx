@@ -1,8 +1,15 @@
+import { motion } from 'framer-motion';
 import AboutSvg from '../assets/undraw_about_me_re_82bv.svg'
+
 const About = () => {
     return (
         <section className="max-w-7xl mx-auto mt-16 mb-24 px-6 md:px-12 lg:mt-40 lg:mb-44" id='about'>
-            <div className="flex flex-col gap-10 lg:flex-row items-center">
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+                viewport={{ once: true, amount: 0.5 }}
+                className="flex flex-col gap-10 lg:flex-row items-center">
                 <div className="flex flex-col justify-center items-start space-y-3 lg:px-16">
                     <h1 className="text-2xl font-bold mx-auto lg:mx-0">About</h1>
                     <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center lg:text-left">
@@ -19,7 +26,7 @@ const About = () => {
                 <div className="flex justify-center mb-6 lg:mb-0">
                     <img className="w-72 md:w-96 lg:w-[30rem] lg:max-w-2xl animate-float" src={AboutSvg} alt="hero" />
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 };
