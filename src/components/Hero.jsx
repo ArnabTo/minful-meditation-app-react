@@ -1,11 +1,15 @@
 import HeroPng from '../assets/undraw_meditation_re_gll0.svg';
 import { Button } from './ui/button';
-
+import { motion } from 'framer-motion';
 const Hero = () => {
     return (
         <header className="max-w-7xl mx-auto mt-16 mb-24 px-6 md:px-12 lg:mt-36 lg:mb-44">
             <div className="flex flex-col-reverse lg:flex-row items-center">
-                <div className="flex flex-col justify-center items-start space-y-3 lg:px-16">
+                <motion.div
+                 initial={{ opacity: 0, x: -100 }}
+                 animate={{ opacity: 1, x: 0 }}
+                 transition={{ duration: 0.5 }}
+                 className="flex flex-col justify-center items-start space-y-3 lg:px-16">
                     <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center lg:text-left">
                         Achieve Inner Peace <br className="hidden lg:block" /> with Expert Meditation Guidance
                     </h1>
@@ -16,10 +20,14 @@ const Hero = () => {
                         Guided by an experienced meditation trainer,<br className='hidden lg:block'></br> embark on a path to calm and clarity
                     </p>
                     <Button className="font-playfair self-center lg:self-start px-4 text-lg">Start Your Journey</Button>
-                </div>
-                <div className="flex justify-center mb-6 lg:mb-0">
+                </motion.div>
+                <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                className="flex justify-center mb-6 lg:mb-0">
                     <img className="w-72 md:w-96 lg:w-[30rem] lg:max-w-2xl animate-float" src={HeroPng} alt="hero" />
-                </div>
+                </motion.div>
             </div>
         </header>
     );

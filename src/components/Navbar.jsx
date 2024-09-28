@@ -6,6 +6,7 @@ import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 import Logo from '../assets/logo.png'
 import '../App.css'
 import { Link } from 'react-scroll';
+import { motion } from 'framer-motion';
 const Navbar = () => {
 
     const { theme } = useTheme();
@@ -30,7 +31,11 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className={`${isScrolled ? 'fixed w-full bg-glassmorphism z-50 top-0' : 'relative'} transition-all duration-300`}>
+        <motion.div
+            initial={{ y: -100, opacity: 0 }}
+            animate={isScrolled ? { y: 3, opacity: 1 } : { y: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className={`${isScrolled ? 'fixed w-full lg:w-1/2 lg:left-1/4 mx-auto bg-glassmorphism z-50 top-0 rounded-full' : 'relative'} transition-all duration-300`}>
             <div className="max-w-7xl mx-auto">
                 {/* Mobile view */}
                 <div className="flex items-center lg:hidden">
@@ -106,7 +111,7 @@ const Navbar = () => {
                                     </Link>
                                 </NavigationMenuItem>
                                 <NavigationMenuItem>
-                                    <Link to='testimonies'smooth={true} duration={500}>
+                                    <Link to='testimonies' smooth={true} duration={500}>
                                         <NavigationMenuLink className='mx-2'>
                                             <span className={`${theme === 'light' ? 'text-black' : 'text-[#d5d5d5]'} font-medium font-lora text-md hover:bg-black hover:text-white px-2 py-1 rounded-lg transition-all`}>Testimonial</span>
                                         </NavigationMenuLink>
@@ -120,7 +125,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 
