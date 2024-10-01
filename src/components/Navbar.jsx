@@ -11,7 +11,7 @@ const Navbar = () => {
 
     const { theme } = useTheme();
     const [isScrolled, setIsScrolled] = useState(false);
-
+    const [isSheetOpen, setIsSheetOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -29,7 +29,9 @@ const Navbar = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
-
+const handleSheet =()=>{
+    setIsSheetOpen(!isSheetOpen)
+}
     return (
         <motion.div
             initial={{ y: -100, opacity: 0 }}
@@ -39,8 +41,8 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto">
                 {/* Mobile view */}
                 <div className="flex items-center lg:hidden">
-                    <Sheet>
-                        <SheetTrigger className=' mx-4 py-5'>
+                    <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
+                        <SheetTrigger className=' mx-4 py-5' >
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={28} height={28} color={"#303036"} fill={"none"}>
                                 <path d="M4 5L16 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                                 <path d="M4 12L20 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -48,13 +50,13 @@ const Navbar = () => {
                             </svg>
                         </SheetTrigger>
 
-                        <SheetContent side='left'>
-                            <div className="grid gap-2 py-6">
-                                <Link to='home' smooth={true} duration={500}>Home</Link>
-                                <Link to='about' smooth={true} duration={500}>About</Link>
-                                <Link to='services' smooth={true} duration={500}>Services</Link>
-                                <Link to='pricing' smooth={true} duration={500}>Pricing</Link>
-                                <Link to='testimonies' smooth={true} duration={500}>Testimonial</Link>
+                        <SheetContent side='bottom' className=' rounded-t-3xl'>
+                            <div className="grid space-y-5">
+                                <Link onClick={handleSheet} className='font-bold font-lora text-lg' to='home' smooth={true} duration={500}>Home</Link>
+                                <Link onClick={handleSheet} className='font-bold font-lora text-lg' to='about' smooth={true} duration={500}>About</Link>
+                                <Link onClick={handleSheet} className='font-bold font-lora text-lg' to='services' smooth={true} duration={500}>Services</Link>
+                                <Link onClick={handleSheet} className='font-bold font-lora text-lg' to='pricing' smooth={true} duration={500}>Pricing</Link>
+                                <Link onClick={handleSheet} className='font-bold font-lora text-lg' to='testimonies' smooth={true} duration={500}>Testimonial</Link>
                             </div>
                         </SheetContent>
                     </Sheet>
